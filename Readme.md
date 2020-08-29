@@ -12,4 +12,8 @@ License: https://bootstrapmade.com/license/
 * Publish spreadsheet to the web
 * Get spreadsheet URL
 * Setup Google API and enable waypoint 
-* Get spreadsheet ID - > https://docs.google.com/spreadsheets/d/*1AKCDUElZ-wSSvUjSEMIKHrucazDjoXOiKxJDNGvGUQ8*/edit#gid=0
+* Get spreadsheetID - > https://docs.google.com/spreadsheets/d/**1AKCDUElZ-wSSvUjSEMIKHrucazDjoXOiKxJDNGvGUQ8**/edit#gid=0
+* Use the script link spreadsheets.google.com/feeds/worksheets/spreadsheetID/public/basic?alt=json but replace spreadsheetID with actual spreadsheetID
+* wget or curl the script, rename as totallyrealfilethaticonverted.json
+
+LAYZOLOGY RULES
