@@ -10,7 +10,7 @@ import scrapy
 # whenever there's a list of fun facts in google results,
 # each list item has the class "v9i61e"
 
-FACT = "v9i61e"   
+FACT = "v9i61e" 
 
 with open("assets/cache.json") as f:
     cache = json.loads(f.read())

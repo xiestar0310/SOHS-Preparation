@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request
+from flask import Flask, render_template, url_for, request, redirect
 import gspread, json, requests
 from oauth2client.service_account import ServiceAccountCredentials
 import weatherapi as w
@@ -93,6 +93,10 @@ def login():
             bcity = dd[0][1]
     else: # Not filled in
         print('stuff not filled in') #debug
-    return render_template('Set_Temp.html', bestcity = bcity)
+    return render_template('index.html', bestcity = bcity)
+
+@app.route('/about', methods=['GET', 'POST'])
+def about():
+    return render_template('about.html')
 
 #debug -> heroku ps:scale web=1 

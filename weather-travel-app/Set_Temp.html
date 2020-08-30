@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="LandingStyle.css" rel="stylesheet" type="text/css" />
+    <link href="twoValSlider.css" rel="stylesheet" type="text/css" />
+		<style>
+			#inputs{
+				text-align: center;
+			}
+			#answer{
+				font-size: 5vh;
+
+			}
+		</style>
+  </head>
+  <body>
+    <!--<h2>Choose Month of Travel</h2>
+		<form>
+      <div class = "Month" style="width:200px;">
+				<select>
+						<!--<option value="">Select Your Month:</option> 
+						<option value="0">January</option>
+						<option value="1">February</option>
+						<option value="2">March</option>
+						<option value="3">April</option>
+						<option value="4">May</option>
+						<option value="5">June</option>
+						<option value="6">July</option>
+						<option value="7">August</option>
+						<option value="8">September</option>
+						<option value="9">October</option>
+						<option value="10">November</option>
+						<option value="11">December</option>
+				</select>
+      </div>
+    	<h2>Set Temperature Preferences</h2>
+			<p>
+				Preferred Lowest Temp (Celsius): 
+				<span id = prefLow>-25</span> <br>
+				Preferred Highest Temp (Celsius): 
+				<span id = prefHigh>25</span>
+			</p>
+			<div class="middle">
+				<div class="multi-range-slider">
+					<input type="range" id="input-left" name="lower-limit" min="0" max="100" value="25">
+					<input type="range" id="input-right" name="higher-limit" min="0" max="100" value="75">
+					<div class="slider">
+						<div class="track"></div>
+						<div class="range"></div>
+						<div class="thumb left"></div>
+						<div class="thumb right"></div>
+					</div>
+				</div>
+			</div>
+			<button class ="fancyButton"> <a href="Search.html"> Next </a></button>
+			<button class ="fancyButton"><a href="index.html">Back</a></button>
+		</form>
+    -->
+    
+    <form method="POST" action="{{ url_for('login') }}">
+			<div id="inputs">
+				<h2>Choose Monthly Temperature</h2>
+				<label for="month1">Month # (Jan=1):</label>
+      	<input id="month1" type="text" name="month1"> <br>
+				<label for="low">Lowest Temperature (C):</label>
+     	 	<input type="text" id="low" name="low"> <br>
+				<label for="high">Highest Temperature (C):</label>
+      	<input type="text" id="high" name="high"> <br>
+				<input id = "button" type="submit">
+				<h2>Or Choose Monthly Precipitation</h2>
+				<label for="month2">Month # (Jan=1): </label>
+      	<input type="text" id = "month2" name="month2"> <br>
+				<label for="rain">Precipitation (mm):</label>
+     	 	<input type="text" id="rain" name="rain"> <br>
+				<input id = "button" type="submit">
+			</div>
+    </form>
+		<h2> The best city to go to is {{bestcity}}! </h2>
+    <footer>
+			<p>Copyright 2020 | All Rights Reserved</p>
+		</footer>
+    <!--<script src="dualSlider.js"></script>
+    <script src="dropDown.js"></script> -->
+  </body>
+</html>

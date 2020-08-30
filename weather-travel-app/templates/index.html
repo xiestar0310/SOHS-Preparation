@@ -3,14 +3,182 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="LandingStyle.css" rel="stylesheet" type="text/css" />
+	<title>repl.it</title>
+		<style>
+				body{
+					font-size: 25px;
+				}
+				
+				img{
+					display: block;
+					margin: 0 auto;
+				}
+				h1{
+					position: relative;
+					top: -60px;
+					text-align: center;
+					font-family: "Arial"; 
+					background: -webkit-linear-gradient(left,rgb(169, 254, 255) ,rgb(0, 99, 100));
+					background: -o-linear-gradient(right, rgb(169, 254, 255) ,rgb(0, 99, 100));
+					background: -moz-linear-gradient(right,rgb(169, 254, 255) ,rgb(0, 99, 100));
+					background: linear-gradient(to right, rgb(169, 254, 255) ,rgb(0, 99, 100)); 
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+				
+				h2{
+					background: -webkit-linear-gradient(left,rgb(169, 254, 255) ,rgb(0, 99, 100));
+					background: -o-linear-gradient(right, rgb(169, 254, 255) ,rgb(0, 99, 100));
+					background: -moz-linear-gradient(right,rgb(169, 254, 255) ,rgb(0, 99, 100));
+					background: linear-gradient(to right, rgb(169, 254, 255) ,rgb(0, 99, 100)); 
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					text-align: center;
+					font-family: "Arial"; 
+					font-size: 7vh;
+				}
+				
+				p{
+					text-align: center;
+					font-family: "Arial"; 
+					font-size: 0.5em;
+				}
+				
+				footer{
+					position: fixed;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 5%;
+					background-color:rgb(0,206,209);
+					color: white;
+				}
+				
+				.fancyButton{
+					background-color:	rgb(0,206,209);
+					border: none;
+					text-decoration: none;
+					color: white;
+					/*padding: 15px 32px;*/
+					text-align: center;
+					display: block;  
+					margin: 0 auto;
+					border-radius: 15px; 
+					margin-top: 10px;
+					font-size: 0.64em;
+				}
+				
+				.fancyButton:hover{
+					background-color:	rgb(46, 226, 230);
+				}
+				
+				#button{
+					background-color:	rgb(0,206,209);
+					border: none;
+					text-decoration: none;
+					color: white;
+					padding: 15px 32px;
+					text-align: center;
+					display: block;  
+					margin: 0 auto;
+					border-radius: 15px; 
+					margin-top: 10px;
+					font-size: 0.64em;
+				}
+				
+				#button:hover{
+					background-color:	rgb(46, 226, 230);
+				}
+				
+				.Month{
+					position: relative;
+					font-family: Arial;
+					font-size: 0.7em;
+					display: block;
+					margin: 0 auto;
+				}
+				
+				.Month select{
+					display: none;
+				}
+				
+				.select-selected{
+					background-color: rgb(0,206,209);
+				}
+				
+				.select-selected:after {
+					position: absolute;
+					content: "";
+					top: 13px;
+					right: 10px;
+					width: 0;
+					height: 0;
+					border: 6px solid transparent;
+					border-color: #FFF transparent transparent transparent;
+				}
+				
+				.select-selected.select-arrow-active:after {
+					border-color: transparent transparent #fff transparent;
+					top: 5px;
+				}
+				
+				.select-items div,.select-selected {
+					color: #FFFFFF;
+					padding: 4px 4px;
+					border: 1px solid transparent;
+					border-color: transparent transparent  rgb(0, 0, 0) transparent;
+					cursor: pointer;
+				}
+				
+				.select-items {
+					position: absolute;
+					background-color:rgb(0,206,209);
+					top: 100%;
+					left: 0;
+					right: 0;
+					z-index: 99;
+				}
+				
+				.select-hide {
+					display: none;
+				}
+				
+				.select-items div:hover, .same-as-selected {
+					background-color: rgb(46, 226, 230);
+				}
+				
+				a {
+					padding: 15px 32px;
+					text-align: center;
+					display: block;  
+					text-decoration: none;
+					color: white;
+				}
+		</style>
   </head>
   <body>
-		<img src="assets/images/logo.png">
-		<h1> The Weathered Traveller </h1>    
-    <button class = fancyButton> <a href="Set_Temp.html"> Start </a> </button> 
-    <!--<button class = fancyButton> <a href = "Set_Rainfall.html"> Choose Preferred Rainfall Levels</a> </button>-->
+    <img src="https://cdn.discordapp.com/attachments/732039614340005982/749425864210513930/logo.png">
+		<h1> The Weathered Traveller </h1>  
+	<p><a href="{{ url_for('about') }}">Check out this cool form!</a></p>
+    <form method="POST" action="{{ url_for('login') }}">
+			<div id="inputs">
+				<h2>Choose Monthly Temperature</h2>
+				<label for="month1">Month:</label>
+      	<input id="month1" type="text" name="month1"> <br>
+				<label for="low">Lowest Temperature (C):</label>
+     	 	<input type="text" id="low" name="low"> <br>
+				<label for="high">Highest Temperature (C):</label>
+      	<input type="text" id="high" name="high"> <br>
+				<input id = "button" type="submit">
+				<h2>Or Choose Monthly Precipitation</h2>
+				<label for="month2">Month: </label>
+      	<input type="text" id = "month2" name="month2"> <br>
+				<label for="rain">Precipitation (mm):</label>
+     	 	<input type="text" id="rain" name="rain"> <br>
+				<input id = "button" type="submit">
+			</div>
+    </form>
+		<h2> The best city to go to is {{bestcity}}! </h2>
     <footer>
 			<p>Copyright 2020 | All Rights Reserved</p>
 		</footer>
