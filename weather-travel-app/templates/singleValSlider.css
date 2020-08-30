@@ -1,0 +1,73 @@
+.slider > .thumb.hover {
+	box-shadow: 0 0 0 10px rgba(176, 176, 176, 0.726);
+}
+.slider > .thumb.active {
+	box-shadow: 0 0 0 20px rgba(176, 176, 176, 0.726);
+}
+.slider > .thumb {
+	position: absolute;
+	z-index: 3;
+	width: 30px;
+	height: 30px;
+	background-color: #6b6b6b;
+	border-radius: 50%;
+	box-shadow: 0 0 0 0 rgba(176, 176, 176, 0.726);
+	transition: box-shadow .3s ease-in-out;
+}
+.slider > .thumb.left {
+	left: 0%;
+	transform: translate(-15px, -10px);
+}
+.slider > .track {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-radius: 5px;
+	background-color:rgb(0,206,209);
+}
+.slider > .selected {
+	position: absolute;
+	z-index: 2;
+	left: 0%;
+	right: 0%;
+	top: 0;
+	bottom: 0;
+	border-radius: 5px;
+	background-color:rgb(145, 145, 145);
+}
+.slider {
+	position: relative;
+	z-index: 1;
+	height: 10px;
+	margin: 0 15px;
+}
+.centre_slider{
+  position: relative;
+	width: 90%;
+	max-width: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+input[type=range] {
+	position: absolute;
+	pointer-events: none;
+	-webkit-appearance: none;
+	z-index: 2;
+	height: 10px;
+	width: 100%;
+	opacity: 0;
+}
+input[type=range]::-webkit-slider-thumb {
+	pointer-events: all;
+	width: 30px;
+	height: 30px;
+	border-radius: 0;
+	border: 0 none;
+	background-color: red;
+	-webkit-appearance: none;
+}

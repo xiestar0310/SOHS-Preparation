@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "weather-travel-app-287818",
+    "private_key_id": "9c95060cd795e3807c1a1fc0d2b1e8c25bacebbc",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDHuAakz35BWLRC\nsIr5Hn3Eu33l+rI6jZMv1yTAmyKO2LljZocr54NaxxtT8Tic3EvG7+xeItXyd8rM\nWHo5B1I6KLw/D8dg/2+p6FfbVoEee/izTvF+E6CXJxiS6CX9Xm0AgXIj2fUMfWqb\ns/CSHHdFDEXp83OCUyhGyuEXtRROGt8VGHlefNG8R+AG3g3bdky9NDnziZXuvBAL\nB3WgeeH2d13J0K9k749eikMlBZcQkNFbNqk6OuqsbhS8saaIPc4xxx4RrJ7Fb3v3\ntbQ/6LA8IN5g1jjt+eH4c34Zr2BcSBusxc0ldwQC+M+CbWQmjYrX4pwKTxAeNaz4\n0VZ/X+qtAgMBAAECggEAHJCkFp98yeDji2RPxDjJuUEtzR5xrnFAW4fUgF3P8Als\nXpyz+aIXxfyTWoq2U60og3AeaQpnelIK5fZDqPN0nc/kuMpLdIKkWHNcWYlCV3dY\nx2Cjpqos/mF/oMdmY5pFUdyx1BHg/CPWAyYV4vgCURRjzYXeAAZfzNxInIjwOglZ\n7rEroIN3Yw0+H5L1RXJttRZvbX/4v9g/P21MnEqi9iHtsqCEpnS1Qymy7PVe/tHK\n6q2xA1Z/Xn+kjsYT2E3XbDYb/hrl5lovdLW9c6LoUlBSM5jHDoqvLLMcJJc81iWW\n6B6nKGJdLlTQyiTn22AlmB5ar6GpDkDus6/CGD+UGwKBgQD2//aYIVOVUp+swhTO\n0Bkoad8568HwAcGa3J7Pnef5zWnF5JGO5yNT4Cn+3AOBGR0BG3bVzIIiBto9+5kE\nwQLTqWanxCGNmPrBFIdpeUZje3Np2sDplLFkgSQJz6tsBTiPSlkjohs1Z/xiMVbj\nvHLCTnB5w8gJKVlfPiWvetxv/wKBgQDO/wVwud/XHZeeIM016VQt/kEXBy6JIZfZ\nRX+9KtVUtuHffWd1LwJiXFx31Jm0TBFZyca+d3G6fHJeH6uvWuVksHRyvyIAW1xA\nPIYGPgOtr+eZlkr8UIJ+KmiLMpX5ksPCP/FRZJ6UrGIdycGh7luz128UlFO+3xER\n3DImzkhlUwKBgQCv7jFeup4mReulybe4d1D0EDUHtH02zolwHKShjP+mVkF4yw1C\nlC/9ljVTarK0SYb3OvCx6DDou6jHbWXYlQHGcWrFJFYh3Uz+Kfkpj1Arm8rhIwc1\nWMvhonpg4qJfFnjq1zIWx2hJ6f9CkZIqNBgpfmVu1Zytqd4WkNWW4BQTUQKBgQCV\nX4jQgQGb3Xn1HVyY4+jgS9Myx/b39Gr82l9E5i0ONe8ndPp8oNDKpDYCL0Q/zIjU\nz3wBJHbIiVeKvrYJE8Hn+EIAMBdcRJF8tXBN/uBurTqnJcK083BHlVjd4kJB2Hw1\nqCj/gGnDheZD8r0tmrFIRVWedy871QMfbVQvlrq9iwKBgQCJW/Dl8vaIBeqYLKoV\nNuo/YX8oX7rLZWzeW3KTfOoF6krJ7dK0h7QNl5UxKzfYWNxV9ryKqeRmObproEfm\n+NTFGST6TqhCZ0gLyJLOGRIJKh6rpA0M46bVJU7OyiZsFHKI8v+1lVuGVyiD0xRl\nURriLjUawHIqLkg/DGfMkm6C2w==\n-----END PRIVATE KEY-----\n",
+    "client_email": "travelweatherapp@weather-travel-app-287818.iam.gserviceaccount.com",
+    "client_id": "112569918078027581538",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/travelweatherapp%40weather-travel-app-287818.iam.gserviceaccount.com"
+  }
+  
