@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-	<title>repl.it</title>
+	<title>The Weathered Traveller</title>
 		<style>
 				body{
 					font-size: 25px;
@@ -152,14 +152,14 @@
 					text-align: center;
 					display: block;  
 					text-decoration: none;
-					color: white;
+					color: black;
 				}
 		</style>
   </head>
   <body>
     <img src="https://cdn.discordapp.com/attachments/732039614340005982/749425864210513930/logo.png">
 		<h1> The Weathered Traveller </h1>  
-	<p><a href="{{ url_for('about') }}">Check out this cool form!</a></p>
+	<p><a href="{{ url_for('about') }}">Check out stuff about us!</a></p>
     <form method="POST" action="{{ url_for('login') }}">
 			<div id="inputs">
 				<h2>Choose Monthly Temperature</h2>
@@ -178,9 +178,9 @@
 				<input id = "button" type="submit">
 			</div>
     </form>
-		<h2> The best city to go to is {{bestcity}}! </h2>
-    <footer>
-			<p>Copyright 2020 | All Rights Reserved</p>
-		</footer>
+	<h2> The best city to go to is {{bestcity}} in {{bestcountry}}! </h2>
+	<p> {{bestdesc}} </p>
+	<p> {{bestwear}} </p>
+	<p> Image: {{besturl}} </p>
   </body>
 </html>

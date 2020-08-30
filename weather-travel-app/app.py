@@ -14,6 +14,7 @@ WEATHER_SHEET = gc.open('Weather Sheet FINAL')
 TEMPERATURE = WEATHER_SHEET.worksheet('Temperature Data')
 RAINFALL = WEATHER_SHEET.worksheet('Rainfall Data')
 TIME = WEATHER_SHEET.worksheet('Time')
+CITYINFO = WEATHER_SHEET.worksheet('City Info')
 #WEATHER_SHEET.share('mmmzzz66g@gmail.com', perm_type = 'user', role = 'writer')
 #WEATHER = WEATHER_SHEET.add_worksheet(title = "Weather Info", rows = "10", cols = "2")
 #WEATHER_SHEET.del_worksheet('Sheet1')
@@ -49,6 +50,10 @@ def sort_tuple(tup):
 @app.route('/', methods=['POST', 'GET'])
 def login():
     bcity = ""
+    bcountry = ""
+    bdesc = ""
+    burl = ""
+    bwear = ""
     if request.method == 'POST':
         # Check if both form methods are filled in
         if request.form.get('low') and request.form.get('high') and request.form.get('month1') and valid(request.form.get('month1')):
@@ -74,6 +79,15 @@ def login():
                 dd.append((avg2, city))
             dd = sort_tuple(dd)
             bcity = dd[0][1]
+            for i in range(2, 22):
+                istr = str(i)
+                if CITYINFO.acell("A{}".format(istr)).value == bcity:
+                    bcountry = CITYINFO.acell("B{}".format(istr)).value
+                    if bcountry == "":
+                        bcountry = bcity
+                    bdesc = CITYINFO.acell("C{}".format(istr)).value
+                    burl = CITYINFO.acell("D{}".format(istr)).value
+                    bwear = CITYINFO.acell("E{}".format(istr)).value
         elif request.form.get('rain') and request.form.get('month2') and valid(request.form.get('month2')):
             month = request.form.get('month2').lower()
             rain = request.form.get('rain')
@@ -91,9 +105,19 @@ def login():
                 dd.append((rain2, city))
             dd = sort_tuple(dd)
             bcity = dd[0][1]
+            for i in range(2, 22):
+                istr = str(i)
+                if CITYINFO.acell("A{}".format(istr)).value == bcity:
+                    bcountry = CITYINFO.acell("B{}".format(istr)).value
+                    if bcountry == "":
+                        bcountry = bcity
+                    bdesc = CITYINFO.acell("C{}".format(istr)).value
+                    burl = CITYINFO.acell("D{}".format(istr)).value
+                    bwear = CITYINFO.acell("E{}".format(istr)).value
+                    print(bdesc)
     else: # Not filled in
         print('stuff not filled in') #debug
-    return render_template('index.html', bestcity = bcity)
+    return render_template('index.html', bestcity = bcity, bestcountry = bcountry, bestdesc = bdesc, besturl = burl, bestwear = bwear)
 
 @app.route('/about', methods=['GET', 'POST'])
 def about():
