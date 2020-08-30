@@ -86,8 +86,8 @@ def login():
                     if bcountry == "":
                         bcountry = bcity
                     bdesc = CITYINFO.acell("C{}".format(istr)).value
-                    burl = CITYINFO.acell("D{}".format(istr)).value
-                    bwear = CITYINFO.acell("E{}".format(istr)).value
+                    bwear = CITYINFO.acell("D{}".format(istr)).value
+                    burl = CITYINFO.acell("E{}".format(istr)).value
         elif request.form.get('rain') and request.form.get('month2') and valid(request.form.get('month2')):
             month = request.form.get('month2').lower()
             rain = request.form.get('rain')
@@ -112,12 +112,12 @@ def login():
                     if bcountry == "":
                         bcountry = bcity
                     bdesc = CITYINFO.acell("C{}".format(istr)).value
-                    burl = CITYINFO.acell("D{}".format(istr)).value
-                    bwear = CITYINFO.acell("E{}".format(istr)).value
+                    bwear = CITYINFO.acell("D{}".format(istr)).value
+                    burl = CITYINFO.acell("E{}".format(istr)).value
                     print(bdesc)
     else: # Not filled in
         print('stuff not filled in') #debug
-    return render_template('index.html', bestcity = bcity, bestcountry = bcountry, bestdesc = bdesc, besturl = burl, bestwear = bwear)
+    return render_template('index.html', bestcity = bcity, bestcountry = bcountry, besturl = burl, bestdesc = bdesc, bestwear = bwear)
 
 @app.route('/about', methods=['GET', 'POST'])
 def about():
